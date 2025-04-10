@@ -41,35 +41,6 @@ window.onload = () => {
   //   };
   // });
 
-  const btnShareKa = document.querySelector(".shareKt");
-  btnShareKa.addEventListener("click", () => {
-    Kakao.Share.sendDefault({
-      objectType: "feed",
-      content: {
-        title: "준범 ♥ 은지의 모바일 청첩장",
-        description: "2025년 6월 7일 토요일♡",
-        imageUrl: "https://i.imgur.com/sh0fhB5.png",
-        imageWidth: 1200,
-        imageHeight: 630,
-        link: {
-          mobileWebUrl: "https://mo75.luvle.kr",
-          webUrl: "https://mo75.luvle.kr",
-        },
-      },
-      buttons: [
-        {
-          title: "자세히 보기",
-          link: {
-            mobileWebUrl: "https://mo75.luvle.kr",
-            webUrl: "https://mo75.luvle.kr",
-          },
-        },
-      ],
-      // 카카오톡 미설치 시 카카오톡 설치 경로이동
-      installTalk: true,
-    });
-  });
-
   // const btnShareKs = document.querySelector(".shareKs");
   // btnShareKs.addEventListener("click", () => {
   //   Kakao.Story.open({
@@ -110,10 +81,4 @@ window.onload = () => {
     };
   });
 
-  const shareViaSMSBtn = document.querySelector(".shareTwoG");
-  shareViaSMSBtn.addEventListener("click", () => {
-    const message = "모바일 청첩장을 확인해주세요! " + window.location.href;
-    const link = "sms:?body=" + encodeURIComponent(message);
-    window.location.href = link;
-  });
 };

@@ -12,10 +12,10 @@
   <!-- 검색 엔진 색인화 방지 -->
   <meta name="robots" content="noindex, nofollow" />
   <meta name="googlebot" content="noindex, nofollow" />
-  
+
   <!-- 페이지 캐싱 및 아카이빙 방지 -->
   <meta name="robots" content="noarchive, nosnippet" />
-  
+
   <!-- 이미지 색인화 방지 -->
   <meta name="robots" content="noimageindex" />
   <meta name="description" content="2025년 6월 7일 토요일♡" />
@@ -105,11 +105,10 @@
             <div style="line-height: 40px;">
               <p id="parentInfo">
                 <!-- <span style="font-size: large"> -->
-                  <span style="font-size: large; display: inline-flex; align-items: center;">
-                    <img src="img/flower_image.png" 
-                         style="width: 20px; height: 20px; margin-right: 4px;">
-                    <span style="position: relative; top: 2px;">이광호 · 김은순</span>
-                  </span>
+                <span style="font-size: large; display: inline-flex; align-items: center;">
+                  <img src="img/flower_image.png" style="width: 20px; height: 20px; margin-right: 4px;">
+                  <span style="position: relative; top: 2px;">이광호 · 김은순</span>
+                </span>
                 <span>
                   <span>의</span>
                   <span style="
@@ -141,16 +140,15 @@
               <p id="parentInfo">
                 <!-- <span style="font-size: large; display: inline-flex; align-items: center;">
                   <img src="img/flower_image.png" style="width: 20px; height: 20px; margin-right: 4px;"> -->
-                  <span style="font-size: large">
-                    이창효 · 
-                    <span style="font-size: large; display: inline-flex; align-items: center;">
-                      <img src="img/flower_image.png" 
-                           style="width: 20px; height: 20px; margin-right: 4px;">
-                      <span style="position: relative; top: 2px;">최귀애</span>
-                    </span>
-                  </span>         
-                  <span>의</span>
-                  <span style="
+                <span style="font-size: large">
+                  이창효 ·
+                  <span style="font-size: large; display: inline-flex; align-items: center;">
+                    <img src="img/flower_image.png" style="width: 20px; height: 20px; margin-right: 4px;">
+                    <span style="position: relative; top: 2px;">최귀애</span>
+                  </span>
+                </span>
+                <span>의</span>
+                <span style="
                           font-size: large;
                           min-width: 3rem;
                           display: inline-block;
@@ -578,7 +576,39 @@
                 <img src="img/kakaotalk.png" alt="카카오톡" style="width: 25px; height: 25px" />
                 &nbsp;&nbsp;카카오톡
               </button>
-          
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const btnShareKa = document.querySelector(".shareKt");
+                  btnShareKa.addEventListener("click", () => {
+                    Kakao.Share.sendDefault({
+                      objectType: "feed",
+                      content: {
+                        title: "준범 ♥ 은지의 모바일 청첩장",
+                        description: "2025년 6월 7일 토요일♡",
+                        imageUrl: "https://i.imgur.com/sh0fhB5.png",
+                        imageWidth: 1200,
+                        imageHeight: 630,
+                        link: {
+                          mobileWebUrl: "https://mo75.luvle.kr",
+                          webUrl: "https://mo75.luvle.kr",
+                        },
+                      },
+                      buttons: [
+                        {
+                          title: "자세히 보기",
+                          link: {
+                            mobileWebUrl: "https://mo75.luvle.kr",
+                            webUrl: "https://mo75.luvle.kr",
+                          },
+                        },
+                      ],
+                      // 카카오톡 미설치 시 카카오톡 설치 경로이동
+                      installTalk: true,
+                    });
+                  });
+                });
+              </script>
+
               <!-- <button id="snsButton" type="button" class="shareKs">
                   <img
                     src="img/kakaostory.png"
@@ -595,15 +625,25 @@
                   />
                   페이스북
                 </button> -->
-                  <!-- 2G 문자 전송 버튼 -->
-                  <button id="snsButton" type="button" class="shareTwoG">
-                    <img src="img/smstalk.png" alt="문자전송" style="width: 25px; height: 25px" />
-                    &nbsp;&nbsp;2G 휴대폰 전송
-                  </button>
-                </div>
-              </div>
+              <!-- 2G 문자 전송 버튼 -->
+              <button id="snsButton" type="button" class="shareTwoG">
+                <img src="img/smstalk.png" alt="문자전송" style="width: 25px; height: 25px" />
+                &nbsp;&nbsp;2G 휴대폰 전송
+              </button>
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const shareViaSMSBtn = document.querySelector(".shareTwoG");
+                  shareViaSMSBtn.addEventListener("click", () => {
+                    const message = "모바일 청첩장을 확인해주세요! " + window.location.href;
+                    const link = "sms:?body=" + encodeURIComponent(message);
+                    window.location.href = link;
+                  });
+                });
+              </script>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
       <!-- 하단 로고 -->
       <footer>
@@ -619,7 +659,7 @@
   </main>
   </div>
 
- 
+
   <!-- <div class="swiper swiper-container" style="display: none">
     <div class="swiper-wrapper slide-wrapper">
       <div class="swiper-slide">
@@ -670,9 +710,9 @@
       <div class="swiper-slide">
         <img src="img/wedding/16.png" title="TITLE 16" />
     </div> -->
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
   </div>
 </body>
 

@@ -106,7 +106,10 @@
               <p id="parentInfo">
                 <!-- <span style="font-size: large"> -->
                   <span style="font-size: large; display: inline-flex; align-items: center;">
-                    <img src="img/flower_image.png" style="width: 20px; height: 20px; margin-right: 4px;">이광호 · 김은순</span>
+                    <img src="img/flower_image.png" 
+                         style="width: 20px; height: 20px; margin-right: 4px;">
+                    <span style="position: relative; top: 2px;">이광호 · 김은순</span>
+                  </span>
                 <span>
                   <span>의</span>
                   <span style="
@@ -139,9 +142,13 @@
                 <!-- <span style="font-size: large; display: inline-flex; align-items: center;">
                   <img src="img/flower_image.png" style="width: 20px; height: 20px; margin-right: 4px;"> -->
                   <span style="font-size: large">
-                    이창효 · <span style="font-size: large; display: inline-flex; align-items: center;">
-                  <img src="img/flower_image.png" style="width: 20px; height: 20px; margin-right: 4px;">최귀애
-                </span>            
+                    이창효 · 
+                    <span style="font-size: large; display: inline-flex; align-items: center;">
+                      <img src="img/flower_image.png" 
+                           style="width: 20px; height: 20px; margin-right: 4px;">
+                      <span style="position: relative; top: 2px;">최귀애</span>
+                    </span>
+                  </span>         
                   <span>의</span>
                   <span style="
                           font-size: large;
@@ -567,8 +574,7 @@
           <!-- 공유하기 버튼 -->
           <div class="total-button-container">
             <div class="button-container">
-              <!-- 카카오톡 버튼 -->
-              <button id="btnKakaoTalk" type="button" class="shareKt">
+              <button id="snsButton" type="button" class="shareKt">
                 <img src="img/kakaotalk.png" alt="카카오톡" style="width: 25px; height: 25px" />
                 &nbsp;&nbsp;카카오톡
               </button>
@@ -590,12 +596,14 @@
                   페이스북
                 </button> -->
                   <!-- 2G 문자 전송 버튼 -->
-    <button id="btn2GSend" type="button" class="shareTwoG">
-      <img src="img/smstalk.png" alt="문자전송" style="width: 25px; height: 25px" />
-      &nbsp;&nbsp;2G 휴대폰 전송
-    </button>
-  </div>
-</div>
+                  <button id="snsButton" type="button" class="shareTwoG">
+                    <img src="img/smstalk.png" alt="문자전송" style="width: 25px; height: 25px" />
+                    &nbsp;&nbsp;2G 휴대폰 전송
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
 
       <!-- 하단 로고 -->
       <footer>
@@ -611,28 +619,7 @@
   </main>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const kakaoBtn = document.getElementById("btnKakaoTalk");
-      const twoGBtn = document.getElementById("btn2GSend");
-  
-      // 카카오톡 버튼 클릭 시
-      if (kakaoBtn) {
-        kakaoBtn.addEventListener("click", function () {
-          // 여기에 카카오톡 공유 코드 넣으세요
-          alert("카카오톡 공유 기능은 아직 연결되지 않았습니다.");
-        });
-      }
-  
-      // 2G 문자 전송 버튼 클릭 시
-      if (twoGBtn) {
-        twoGBtn.addEventListener("click", function () {
-          window.location.href = "sms:?body=청첩장 링크입니다 💌 https://mo75.luvle.kr";
-        });
-      }
-    });
-  </script>
-
+ 
   <!-- <div class="swiper swiper-container" style="display: none">
     <div class="swiper-wrapper slide-wrapper">
       <div class="swiper-slide">

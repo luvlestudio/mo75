@@ -567,10 +567,12 @@
           <!-- 공유하기 버튼 -->
           <div class="total-button-container">
             <div class="button-container">
-              <button id="snsButton" type="button" class="shareKt">
+              <!-- 카카오톡 버튼 -->
+              <button id="btnKakaoTalk" type="button" class="shareKt">
                 <img src="img/kakaotalk.png" alt="카카오톡" style="width: 25px; height: 25px" />
                 &nbsp;&nbsp;카카오톡
               </button>
+          
               <!-- <button id="snsButton" type="button" class="shareKs">
                   <img
                     src="img/kakaostory.png"
@@ -587,14 +589,13 @@
                   />
                   페이스북
                 </button> -->
-              <button id="snsButton" type="button" class="shareTwoG">
-                <img src="img/smstalk.png" alt="문자전송" style="width: 25px; height: 25px" />
-                &nbsp;&nbsp;2G 휴대폰 전송
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+                  <!-- 2G 문자 전송 버튼 -->
+    <button id="btn2GSend" type="button" class="shareTwoG">
+      <img src="img/smstalk.png" alt="문자전송" style="width: 25px; height: 25px" />
+      &nbsp;&nbsp;2G 휴대폰 전송
+    </button>
+  </div>
+</div>
 
       <!-- 하단 로고 -->
       <footer>
@@ -609,6 +610,28 @@
   </div>
   </main>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const kakaoBtn = document.getElementById("btnKakaoTalk");
+      const twoGBtn = document.getElementById("btn2GSend");
+  
+      // 카카오톡 버튼 클릭 시
+      if (kakaoBtn) {
+        kakaoBtn.addEventListener("click", function () {
+          // 여기에 카카오톡 공유 코드 넣으세요
+          alert("카카오톡 공유 기능은 아직 연결되지 않았습니다.");
+        });
+      }
+  
+      // 2G 문자 전송 버튼 클릭 시
+      if (twoGBtn) {
+        twoGBtn.addEventListener("click", function () {
+          window.location.href = "sms:?body=청첩장 링크입니다 💌 https://mo75.luvle.kr";
+        });
+      }
+    });
+  </script>
 
   <!-- <div class="swiper swiper-container" style="display: none">
     <div class="swiper-wrapper slide-wrapper">

@@ -354,9 +354,9 @@
       </div>
 
       <!-- map 길찾기 -->
-      <div class="animate-on-scroll" id="MapIconDiv" style="background-color: #F0CD44;">
+      <div id="goToKakaoMap" class="animate-on-scroll" id="MapIconDiv" style="background-color: #F0CD44;">
         <div>
-          <a class="maplink" href="https://kko.kakao.com/SRV0z07__H">
+          <a class="maplink">
             <div>
               <button id="kakaoMapButton" type="button">
                 <!-- <img
@@ -370,6 +370,11 @@
           </a>
         </div>
       </div>
+      <script>
+        document.getElementById("goToKakaoMap").addEventListener("click", function () {
+          window.open("https://kko.kakao.com/SRV0z07__H", "_blank");
+        });
+      </script>
 
       <!-- 이동수단 정보 -->
       <div class="animate-on-scroll">

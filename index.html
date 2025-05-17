@@ -365,10 +365,17 @@
           </a>
         </div>
         <script>
-          document.getElementById("kakaoMapButton").addEventListener("click", function () {
-            window.open(`//map.kakao.com/link/map/웨딩그룹위더스 영등포, 37.521372, 126.904590`, "_blank");
-          });
-        </script>
+        const mapLinkEl = document.querySelector(".maplink");
+        mapLinkEl.addEventListener("click", () => { 
+          const userAgent = navigator.userAgent.toLowerCase();
+  
+          if (userAgent.indexOf('iphone') > -1) {
+            window.location.href = "kakaomap://place?id=24250591"
+          } else {
+            window.location.href = "https://kko.kakao.com/WXjC36niqg";
+          }
+        });
+      </script>
       </div>
 
       <!-- 이동수단 정보 -->
